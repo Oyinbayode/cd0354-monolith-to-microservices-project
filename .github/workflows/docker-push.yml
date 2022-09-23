@@ -22,8 +22,6 @@ jobs:
       packages: write
 
     steps:
-      - run: |
-        echo KEY: '${DOCKER_PASSWORD}'
       - name: Checkout repo
         uses: actions/checkout@v3
 
