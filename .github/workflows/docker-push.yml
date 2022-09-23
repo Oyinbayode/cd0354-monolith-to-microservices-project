@@ -3,7 +3,6 @@ on: push
 
 jobs:
   build-and-push-image:
-    environment: secrets
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
