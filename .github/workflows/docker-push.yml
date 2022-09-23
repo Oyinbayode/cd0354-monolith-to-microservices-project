@@ -3,6 +3,7 @@ on: push
 
 jobs:
   build-and-push-image:
+    environment: docker
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -28,7 +29,7 @@ jobs:
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:
           username: ${{ github.actor }}
-          password: ${{ secret.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           
       - name: Extract metadata (tags, labels) for Docker
         id: meta
