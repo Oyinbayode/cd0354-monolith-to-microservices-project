@@ -1,9 +1,6 @@
 name: Build & publish images
 on: push
 
-env:
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
